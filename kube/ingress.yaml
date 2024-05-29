@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myingress-nodejs
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: mynodejs.localhost
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nodejspod 
+            port:
+              number: 3000

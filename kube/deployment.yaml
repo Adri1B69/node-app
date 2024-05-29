@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nodejs
+  name: nodejspod
+spec:
+  selector:
+    matchLabels:
+      app: nodejs
+  template:
+    metadata:
+      labels:
+        app: nodejs
+    spec:
+      containers:
+      - image: mynodejs
+        imagePullPolicy: Never
+        name: mynodejscontainer
+        resources: {}
+        envFrom:
+        - configMapRef:
+            name: mynodeconfigmap

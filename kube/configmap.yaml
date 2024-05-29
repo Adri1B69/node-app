@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mynodeconfigmap
+data:
+  WELCOME_MESSAGE: "Coucou c moi !!!!"
+  PORT: "3000"
