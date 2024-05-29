@@ -14,7 +14,7 @@ spec:
         app: nodejs
     spec:
       containers:
-      - image: mynodejs
+      - image: node-app
         imagePullPolicy: Never
         name: mynodejscontainer
         resources: {}
