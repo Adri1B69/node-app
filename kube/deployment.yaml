@@ -21,3 +21,14 @@ spec:
         envFrom:
         - configMapRef:
             name: mynodeconfigmap
+        env:
+        - name: MONGO_USERNAME
+          valueFrom: 
+            secretKeyRef: 
+              name: mongosecret
+              key: mongo_user
+        - name: MONGO_PASSWORD
+          valueFrom: 
+            secretKeyRef: 
+              name: mongosecret
+              key: mongo_pass
